@@ -36,7 +36,7 @@ const product = (props) => {
             <div className="zevioo-rating__stats">
             <span className="zevioo-rating__text"><span itemProp="ratingValue" className="zevioo-rating__text-bold">{rating} </span>  <span itemProp="reviewCount" className="zevioo-rating__count"> ({props.rc})</span></span>
             <div className="zevioo-star-ratings">
-            <div className="zevioo-star-ratings_top" style={{width: '40%', color: 'rgb(242, 98, 54)' }}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div className="zevioo-star-ratings_top" style={{width: '40%', color: 'var(--zevioo)' }}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             <div className="zevioo-star-ratings_bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             </div>
             </div>
@@ -46,7 +46,7 @@ const product = (props) => {
             <div className="zevioo-rating__stats">
             <span className="zevioo-rating__text"><span itemProp="ratingValue" className="zevioo-rating__text-bold">{rating} </span>  <span itemProp="reviewCount" className="zevioo-rating__count"> ({props.rc})</span></span>
             <div className="zevioo-star-ratings">
-            <div className="zevioo-star-ratings_top" style={{width: '60%', color: 'rgb(250, 163, 50)'}}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div className="zevioo-star-ratings_top" style={{width: '60%', color: 'var(--zevioo)'}}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             <div className="zevioo-star-ratings_bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             </div>
             </div>
@@ -56,7 +56,7 @@ const product = (props) => {
             <div className="zevioo-rating__stats">
             <span className="zevioo-rating__text"><span itemProp="ratingValue" className="zevioo-rating__text-bold">{rating} </span>  <span itemProp="reviewCount" className="zevioo-rating__count"> ({props.rc})</span></span>
             <div className="zevioo-star-ratings">
-            <div className="zevioo-star-ratings_top" style={{width: '80%', color: 'rgb(175, 211, 68)'}}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div className="zevioo-star-ratings_top" style={{width: '80%', color: 'var(--zevioo)'}}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             <div className="zevioo-star-ratings_bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             </div>
             </div>
@@ -66,7 +66,7 @@ const product = (props) => {
             <div className="zevioo-rating__stats">
             <span className="zevioo-rating__text"><span itemProp="ratingValue" className="zevioo-rating__text-bold">{rating} </span>  <span itemProp="reviewCount" className="zevioo-rating__count"> ({props.rc})</span></span>
             <div className="zevioo-star-ratings">
-            <div className="zevioo-star-ratings_top" style={{width: '100%', color: 'rgb(82, 185, 82)'} }><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div className="zevioo-star-ratings_top" style={{width: '100%', color: 'var(--zevioo)'} }><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             <div className="zevioo-star-ratings_bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
             </div>
             </div>
