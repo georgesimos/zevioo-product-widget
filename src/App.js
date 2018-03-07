@@ -110,6 +110,7 @@ class App extends Component {
               <Product className="zevioo" 
                 name={product.NM} 
                 price={product.PRC}
+                tag={product.TAG}
                 img={product.IMG}
                 rating={product.OR}
                 rc={product.RC}

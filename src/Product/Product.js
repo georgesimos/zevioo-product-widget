@@ -1,21 +1,21 @@
 import React from 'react'
 
 const product = (props) => {
-
+    if(!String.prototype.trimString) {
     String.prototype.trimString = function(max, add){
         add = add || '...';
         return (this.length > max ? this.substring(0,max)+add : this);
      };
+    }
 
      function rounding(x) {
         return Number.parseFloat(x).toFixed(1);
       }
 
       
-    let title = props.name.trimString(40,'...') ;
+    let title = props.name.trimString(35,'...') ;
     let rating = rounding(props.rating);
     let stars = '';
-
     if(props.rating < 1 ) {
         stars = (
             <div className="zevioo-rating__stats"></div>
@@ -73,8 +73,25 @@ const product = (props) => {
         )
     }
 
-
-
+    let tagColor = '';
+    switch (props.tag) {
+        case "Discount":
+            tagColor = ( <div className="zevioo-product__tag" style={{color: 'var(--tag1)'}} >Low Price </div> )
+            break;
+        case "Trending":
+            tagColor = ( <div className="zevioo-product__tag" style={{color: 'var(--tag2)'}} >Trending Now </div>)
+            break;
+        case "Popular":
+            tagColor = ( <div className="zevioo-product__tag" style={{color: 'var(--tag3)'}} >Very Popular </div>)
+            break;
+        case "new":
+            tagColor = ( <div className="zevioo-product__tag" style={{color: 'var(--tag2)'}} >New Arrival </div>)
+            break;
+    
+        default:
+            tagColor = null
+            break;
+    }
    
     return (
         <div itemScope itemType="http://schema.org/Product" className="zevioo-product">
@@ -83,16 +100,20 @@ const product = (props) => {
                    
                 </div>
                 <div className="zevioo-product__stats">
-                    <span itemProp="name" 
+                    <div itemProp="name" 
                           className="zevioo-product__title">{title}
-                    </span>
-                    <span itemProp="aggregateRating"
+                    </div>
+                    <div itemProp="aggregateRating"
                           itemScope 
                           itemType="http://schema.org/AggregateRating" 
                           className="zevioo-product__rating">
                           {stars} 
-                    </span>
-                    <span className="zevioo-product__price"> <span itemProp="priceCurrency"> &#8364; </span>  <span  itemProp="price">{props.price}</span> </span>
+                    </div>
+                    <div className="zevioo-product__price"> 
+                        <span itemProp="priceCurrency"> &#8364; </span>  
+                        <span itemProp="price">{props.price}</span>     
+                    </div>
+                    {tagColor}
                 </div>
             </a>
         </div>

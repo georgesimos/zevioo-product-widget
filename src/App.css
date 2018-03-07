@@ -13,9 +13,18 @@
     --rating4 : rgb(175, 211, 68);
     --rating5 : rgb(82, 185, 82);
     --zevioo: #ff0d61;
+    --tag1: rgb(252, 79, 109);
+    --tag2: rgb(86, 142, 156);
+    --tag3: rgb(98, 79, 153);
+    --tag4: rgb(57, 147, 250);
     --font-family-helvetica : Helvetica, sans-serif !important;
   
   }
+  * {
+    user-select: none;
+    transition: .3s ease;
+    -webkit-font-smoothing: antialiased;
+    }
 #zevioo-widget_products{
     font-family: var(--font-family-helvetica);
 }
@@ -101,14 +110,14 @@ a.zevioo-product__link {
     height: 200px;
     margin: auto;
 }
-span.zevioo-product__title {
+.zevioo-product__title {
   min-height: 30px;
   display: block;
   font-size: 12px;
   color: var(--blue);
   margin-top: 10px;
 }
-span.zevioo-product__subTitle {
+.zevioo-product__subTitle {
   display: block;
   margin-bottom: 10px;
   font-size: 12px;
@@ -117,7 +126,7 @@ span.zevioo-product__subTitle {
 .zevioo-rating__stats {
     height: 30px;
 }
-span.zevioo-rating__count {
+.zevioo-rating__count {
     display: none !important;
 }
 .zevioo-star-ratings {
@@ -147,20 +156,24 @@ span.zevioo-rating__count {
     margin-left: 10px;
     color: var(--gray);
 }
-span.zevioo-product__price {
+.zevioo-product__price {
     display: block;
     font-size: 17px;
-    font-weight: 600;
-    color: var(--zevioo);
+    font-weight: 100;
+    color: var(--gray);
     margin-bottom: 10px;
     padding-top: 10px;
-    padding-bottom: 20px;
+}
+.zevioo-product__tag {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
 }
 .zevioo-rating__text-bold {
     font-weight: 800;
     margin-right: 5px;
 }
-span.zevioo-action__buy {
+.zevioo-action__buy {
   display: inline-block;
   font-size: 12px;
   padding: .5em .625em;
@@ -171,7 +184,7 @@ span.zevioo-action__buy {
   color: var(--white);
   background: var(--rating1);
 }
-span.zevioo-action__more {
+.zevioo-action__more {
   display: inline-block;
   font-size: 12px;
   color: var(--gray);
@@ -458,16 +471,23 @@ button.zevioo-pagination__right {
     color: var(--black);
 }
 
-
+@media (min-width:601px) and (max-width:691px) {
+    .zevioo-product__title {
+        min-height: 45px;
+    }
+    .zevioo-rating__stats {
+        min-height: auto;
+    }
+}
 @media (max-width:600px){
-    span.zevioo-product__title {
-        min-height: 50px;
+    .zevioo-product__title {
+        min-height: 35px;
         max-height: 50px;
         display: block;
         font-size: 10px;
         margin-top: 5px;
     }
-    span.zevioo-product__price {
+    .zevioo-product__price {
         padding-top: 5px;
     }
 }
@@ -477,24 +497,65 @@ button.zevioo-pagination__right {
         text-align: left;
     }
     .zevioo-rating__stats {
-        height: 35px;
+        height: auto;
     }
     .zevioo-rating__count {
         display: none;
     }
-    span.zevioo-product__title {
+    .zevioo-product__title {
         min-height: 30px;
     }
-}
-@media (min-width:601px) and (max-width:691px) {
-    span.zevioo-product__title {
-        min-height: 45px;
+
+    a.zevioo-header__copyrights {
+        font-size: 10px;
     }
-    .zevioo-rating__stats {
-        min-height: 55px;
+    .zevioo-header__title {
+        font-size: 15px;
     }
 }
 
+@media (max-width:450px){ 
+    .zevioo-header__title {
+        font-size: 12px;
+    }
+    a.zevioo-header__copyrights {
+        font-size: 9px;
+    }
+    a.zevioo-header__copyrights img {
+        height: 9px;
+    }
+    .zevioo-rating__text {
+        font-size: 13px;
+    }
+    .zevioo-star-ratings {
+        font-size: 16px;
+    }
+    .zevioo-product__price {
+        font-size: 14px;
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+    .zevioo-product__tag {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:380px){ 
+    .zevioo-rating__text {
+        font-size: 11px;
+    }
+    .zevioo-star-ratings {
+        font-size: 13px;
+    }
+    .zevioo-product__price {
+        font-size: 12px;
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+    .zevioo-product__tag {
+        font-size: 11px;
+    }
+}
 
 
 /* loader */
